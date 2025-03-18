@@ -6,7 +6,7 @@ This is a simple real-time chat application using Flask and Socket.IO.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/python-chat.git
+   git clone https://github.com/Nuraj250/python-chat.git
    cd python-chat
    ```
 
@@ -40,4 +40,3 @@ This is a simple real-time chat application using Flask and Socket.IO.
 ---
 
 This is a fully functional **Flask & Socket.io chat app** with WebSockets! 🎉  
-Let me know if you need modifications or additional features. 🚀
