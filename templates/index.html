@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="templates/static/styles.css">
+
+    <!-- Socket.io -->
     <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
 </head>
-<body>
-    <div class="chat-container">
-        <h2>Chat Room</h2>
-        <div id="messages"></div>
-        <input type="text" id="messageInput" placeholder="Type a message...">
-        <button onclick="sendMessage()">Send</button>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    
+    <div class="w-full max-w-lg bg-white shadow-lg rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">Chat Room</h2>
+        
+        <div id="messages" class="h-64 overflow-y-auto border border-gray-300 p-3 rounded bg-gray-50 space-y-2">
+            <!-- Messages will appear here -->
+        </div>
+
+        <div class="mt-4 flex">
+            <input type="text" id="messageInput" class="flex-1 border border-gray-300 rounded px-3 py-2" placeholder="Type a message...">
+            <button onclick="sendMessage()" class="ml-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                Send
+            </button>
+        </div>
     </div>
+    <script src="templates/static/script.js"></script>
 </body>
 </html>
